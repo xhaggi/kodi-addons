@@ -48,9 +48,9 @@
     </extension>
 </addon>
 
-<addon id="skin.xperience1080x" version="3.0.0-Beta1" name="Xperience1080x" provider-name="xhaggi">
+<addon id="skin.xperience1080x" version="3.0.0-alpha1" name="Xperience1080x" provider-name="xhaggi">
     <requires>
-        <import addon="xbmc.gui" version="5.9.0" />
+        <import addon="xbmc.gui" version="5.3.0" />
         <import addon="service.skin.widgets" version="0.0.29" />
         <import addon="script.artwork.downloader" version="12.0.29" />
         <import addon="script.tv.show.next.aired" version="6.0.13" />
@@ -61,7 +61,7 @@
         <import addon="script.randomandlastitems" version="2.2.2" />
         <import addon="weather.openweathermap.extended" version="1.0.0" />
     </requires>
-    <extension point="xbmc.gui.skin" effectslowdown="1.00" debugging="false">
+    <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
         <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
     </extension>
     <extension point="xbmc.addon.metadata">
