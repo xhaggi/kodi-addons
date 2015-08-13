@@ -8,5 +8,5 @@
 # https://github.com/user/repo.git branchname
 
 https://github.com/xhaggi/kodi-repository.git
-https://github.com/xhaggi/Xperience1080.git
+https://github.com/xhaggi/Xperience1080.git isengard
 https://github.com/xhaggi/skin.droid.git helix
