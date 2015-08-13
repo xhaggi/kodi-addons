@@ -48,7 +48,7 @@
     </extension>
 </addon>
 
-<addon id="skin.xperience1080x" version="3.0.0" name="Xperience1080x" provider-name="xhaggi">
+<addon id="skin.xperience1080x" version="3.1.0" name="Xperience1080x" provider-name="xhaggi">
     <requires>
         <import addon="xbmc.gui" version="5.9.0" />
         <import addon="service.skin.widgets" version="0.0.29" />

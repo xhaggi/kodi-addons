@@ -1,0 +1,2 @@
+[B]3.0.0[/B]
+• Release for 15.x (Isengard)
