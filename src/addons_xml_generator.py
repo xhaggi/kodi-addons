@@ -41,6 +41,7 @@ class Generator:
     REPO_DATA_DIR = "../data"
     ADDON_XML = "../addons.xml"
     ADDON_XML_MD5 = "../addons.xml.md5"
+    TEXTURE_EXTENSION = ".xbt"
 
     def __init__(self):
         if not os.path.exists(self.ADDON_WORK_DIR):
@@ -166,21 +167,16 @@ class Generator:
 
     def _apply_texture_packer(self, addon_dir):
         media_dir = os.path.join(addon_dir, "media")
-        textures_file = "Textures.xbt"
-        
-        # logging
+        themes_dir = os.path.join(addon_dir, "themes")
+
         print "Apply TexturePacker to " + media_dir
-        self._texturepacker(media_dir, os.path.join(media_dir, textures_file))
+        self._texturepacker(media_dir, os.path.join(media_dir, "Textures" + self.TEXTURE_EXTENSION))
         
-        # delete all media files
-        for item in os.listdir(media_dir):
-            if (item == textures_file):
-                continue
-            item_path = os.path.join(media_dir, item)
-            if os.path.isfile(item_path):
-                os.remove(item_path)
-            else:
-                shutil.rmtree(item_path)
+        print "Check for for themes in " + themes_dir
+        for item in os.listdir(themes_dir):
+            theme_path = os.path.join(themes_dir, item)
+            print "Apply TexturePacker for theme " + item
+            self._texturepacker(theme_path, os.path.join(media_dir, item + self.TEXTURE_EXTENSION))
         
     def _generate_md5_file(self):
         # create a new md5 hash
@@ -214,7 +210,11 @@ class Generator:
                 # skip .git folders
                 if (relroot.startswith(".git")):
                     continue
-                
+
+                # skip media sub folders and themes folder
+                if (relroot.startswith("media/") or relroot.startswith("themes")):
+                	continue
+
                 # adds base dir
                 zip.write(root, os.path.join(base_dir, relroot))
                 
@@ -223,6 +223,10 @@ class Generator:
                     # skip .git files
                     if (file.startswith(".git")):
                         continue
+
+                    # skip media files
+                    if (relroot.startswith("media") and not file.endswith(self.TEXTURE_EXTENSION)):
+                		continue
                         
                     filename = os.path.join(root, file)
                     if os.path.isfile(filename): # regular files only
