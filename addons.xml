@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="repository.xhaggi" name="xhaggi's repository" version="1.0" provider-name="xhaggi">
-    <extension point="xbmc.addon.repository" name="xhaggi's repository">
-        <info compressed="false">https://raw.githubusercontent.com/xhaggi/kodi-addons/master/addons.xml</info>
-        <checksum>https://raw.githubusercontent.com/xhaggi/kodi-addons/master/addons.xml.md5</checksum>
-        <datadir zip="true">https://raw.githubusercontent.com/xhaggi/kodi-addons/master/data/</datadir>
+<addon
+    id="repository.xhaggi"
+    name="xhaggi's repository"
+    version="1.1"
+    provider-name="xhaggi">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="xhaggi's addon repository">
+        <dir minversion="15.9.0">
+            <info compressed="false">https://raw.githubusercontent.com/xhaggi/kodi-addons/jarvis/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/xhaggi/kodi-addons/jarvis/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/xhaggi/kodi-addons/jarvis/data/</datadir>
+            <hashes>true</hashes>
+        </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary>xhaggi's repository</summary>
-        <description>xhaggi's repository</description>
+        <summary>xhaggi's addon repository</summary>
+        <description>Unofficial kodi add-on repository.</description>
         <disclaimer></disclaimer>
         <platform>all</platform>
     </extension>
