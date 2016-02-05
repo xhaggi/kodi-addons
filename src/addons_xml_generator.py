@@ -53,7 +53,7 @@ class Generator:
         return subprocess.check_call(['git'] + list(args))
         
     def _texturepacker(self, input, output):
-        return subprocess.check_call(['./texturepacker', '-input', input, '-output', output])
+        return subprocess.check_call(['./osx/texturepacker', '-input', input, '-output', output])
 
     def _clone_addons(self):
         try:
