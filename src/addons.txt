@@ -8,4 +8,4 @@
 # https://github.com/user/repo.git branchname
 
 https://github.com/xhaggi/repository.xhaggi.git
-https://github.com/vonH/skin.xperience1080.git
+https://github.com/vonH/skin.xperience1080.git Jarvis
