@@ -24,7 +24,7 @@
     </extension>
 </addon>
 
-<addon id="skin.xperience1080" version="5.1.530" name="Xperience1080" provider-name="Piers|xhaggi">
+<addon id="skin.xperience1080" version="5.1.540" name="Xperience1080" provider-name="Piers|xhaggi">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0" />
 		<import addon="service.skin.widgets" version="0.0.29" />
